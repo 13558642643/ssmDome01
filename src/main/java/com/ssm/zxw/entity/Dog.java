@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 public class Dog {
     private String name;
 
+    private int age;
+
     public Dog() {
         System.out.println("dfsdf");
     }
