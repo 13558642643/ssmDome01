@@ -51,5 +51,13 @@ public class MyTest {
 
     }
 
+    @Test
+    public void test3(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        Student student = (Student) applicationContext.getBean("student");
+        System.out.println("学生姓名:"+student.getUserName());
+
+    }
+
 
 }

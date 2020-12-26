@@ -9,7 +9,7 @@ public class Dog {
     private String name;
 
     public Dog() {
-
+        System.out.println("dfsdf");
     }
 
 
