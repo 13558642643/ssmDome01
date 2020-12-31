@@ -59,5 +59,28 @@ public class MyTest {
 
     }
 
+    public static int lookNum(){
+        try {
+            System.out.println("try");
+            return  1 / 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("catch");
+            return  1 / 0;
+        } finally {
+            System.out.println("finally");
+
+
+
+        }
+
+    }
+
+    @Test
+    public void test4(){
+        System.out.println("查看");
+        lookNum();
+    }
+
 
 }
