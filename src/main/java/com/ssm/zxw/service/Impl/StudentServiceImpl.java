@@ -19,4 +19,14 @@ public class StudentServiceImpl implements IStudentService {
         System.out.println("【StudentServiceImpl -> getStudent】");
         return studentDao.getStudent(id);
     }
+
+    @Override
+    public int addStudentName(String name) {
+        return studentDao.addStudentName(name);
+    }
+
+    @Override
+    public int addStudent(Student stu) {
+        return studentDao.addStudent(stu);
+    }
 }

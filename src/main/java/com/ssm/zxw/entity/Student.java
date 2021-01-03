@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 //@Component
 public class Student {
-    private int id;
+    private Integer id;
     private String name;
 }

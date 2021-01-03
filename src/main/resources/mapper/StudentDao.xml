@@ -8,4 +8,15 @@
         SELECT * FROM student WHERE id = #{id}
     </select>
 
+    <insert id="addStudentName" parameterType="com.ssm.zxw.entity.Student" useGeneratedKeys="true" keyProperty="name">
+        insert into student (name) values (#{name})
+    </insert>
+
+    <insert id="addStudent" parameterType="com.ssm.zxw.entity.Student" useGeneratedKeys="true">
+        <selectKey keyProperty="stu.id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into student (name) values (#{stu.name})
+    </insert>
+
 </mapper>
