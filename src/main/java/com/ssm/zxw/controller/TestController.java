@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,6 +56,16 @@ public class TestController {
 
         Student student = iStudentService.getStudent(1);
 
+        return BaseResponseVO.success(student);
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/getStudentById",produces = {"application/json;charset=UTF-8"})
+    public Object getStudentById(HttpServletRequest request, HttpServletResponse response){
+        int id =  Integer.parseInt(request.getParameter("id"));
+        System.out.println("接受参数："+id);
+        Student student = iStudentService.getStudent(id);
         return BaseResponseVO.success(student);
     }
 }
