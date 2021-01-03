@@ -51,7 +51,7 @@ public class TestPost implements BeanDefinitionRegistryPostProcessor {
         GenericBeanDefinition gbd = new GenericBeanDefinition();
         gbd.setBeanClass(Student.class);
         MutablePropertyValues propertyValues =gbd.getPropertyValues();
-        propertyValues.add("userName","zhangsan");
+        propertyValues.add("name","zhangsan");
         registry.registerBeanDefinition("student",gbd);
     }
 

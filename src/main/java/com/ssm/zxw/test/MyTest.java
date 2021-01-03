@@ -47,7 +47,7 @@ public class MyTest {
     public void test2(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         Student student = (Student) applicationContext.getBean("student");
-        System.out.println("学生姓名:"+student.getUserName());
+        //System.out.println("学生姓名:"+student.getUserName());
 
     }
 
@@ -55,7 +55,7 @@ public class MyTest {
     public void test3(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         Student student = (Student) applicationContext.getBean("student");
-        System.out.println("学生姓名:"+student.getUserName());
+        //System.out.println("学生姓名:"+student.getUserName());
 
     }
 
